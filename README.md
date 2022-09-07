@@ -4,7 +4,8 @@ This is a fork&reimplementation of [recipeSearchFlyout app](https://github.com/r
 
 ## Screenshots
 
-![Screenshot 1](Images/shot1.png)
+![Windows 10 Desktop](Images/shot1.png)
+![Android](Images/shot2.png)
 
 Recipes (Rachel's Recipes) is a cross-platform mobile application that uses Xamarin.Forms. 
 It was inspired by all those who are new to cooking (dare I say, first-time chefs! :)), 
@@ -19,12 +20,6 @@ _This app continues to be work-in-progress and at the moment, its primary purpos
 1. **Recipe Search** - Users can search for recipes, by specific categories if they so choose, and add copies to their personal collection.
 2. **My Recipes** - Users can create and save their own recipes using the app! Recipes can also be updated and deleted from their collection.
 
-<p float="left">
-  <img src="Images/screen_starting.png" width="200">
-  <img src="Images/screen_search_recipes.png" width="200">
-  <img src="Images/screen_recipe_detail.png" width="200">
-  <img src="Images/screen_recipes_carousel.png" width="200">
-</p>
 
 ## NuGet packages
 
@@ -44,6 +39,7 @@ _This app continues to be work-in-progress and at the moment, its primary purpos
 ## Credits
 _Disclaimer: Although the app is called "Rachel's Recipes", none of the recipes are her own._
 * Original [recipeSearchFlyout app](https://github.com/rachelkang/recipeSearchFlyout/)
+* Shell-based [recipeSearch app](https://github.com/rachelkang/recipeSearch/)
 * Recipes from [Edamam](https://developer.edamam.com/) 
 * Icons from [Flaticon](https://www.flaticon.com/)
 * Engineering tips and morale from the [Xamarin.Forms](https://github.com/xamarin/Xamarin.Forms) team :)
