@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="F33A7725-647E-4E87-B17A-CA778420006F"
-    Publisher="CN=0D03F006-98C8-418D-95E7-366782549B7F"
+    Name="ME.recipeSearchFlyoutV1"
+    Publisher="CN=media"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="ec485741-fd3e-483c-81be-68815c480690" PhonePublisherId="48500000-0003-4830-0000-000000000000"/>
 
   <Properties>
     <DisplayName>recipeSearchFlyout.UWP</DisplayName>
-    <PublisherDisplayName>0D03F006-98C8-418D-95E7-366782549B7F</PublisherDisplayName>
+    <PublisherDisplayName>mediaexplorer</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -45,6 +45,10 @@
           </uap:ShowNameOnTiles>
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="landscape"/>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="landscapeFlipped"/></uap:InitialRotationPreference>
       </uap:VisualElements>
     </Application>
   </Applications>

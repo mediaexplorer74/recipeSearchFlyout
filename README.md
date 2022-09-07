@@ -4,7 +4,7 @@ This is a fork&reimplementation of [recipeSearchFlyout app](https://github.com/r
 
 ## Screenshots
 
-<img src="Images/app_logo.png" align="left" width="150">
+![Screenshot 1](Images/shot1.png)
 
 Recipes (Rachel's Recipes) is a cross-platform mobile application that uses Xamarin.Forms. 
 It was inspired by all those who are new to cooking (dare I say, first-time chefs! :)), 
