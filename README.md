@@ -4,7 +4,6 @@ This is a fork&reimplementation of [recipeSearchFlyout app](https://github.com/r
 
 ## Screenshots
 
-![Windows 10 Desktop](Images/shot1.png)
 ![Android](Images/shot2.png)
 ![Windows 10 Mobile](Images/shot3.png)
 
