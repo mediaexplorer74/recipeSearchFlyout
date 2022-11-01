@@ -5,38 +5,49 @@
              Title="{Binding Title}"
              xmlns:local="clr-namespace:recipeSearchFlyout.ViewModels"
              xmlns:model="clr-namespace:recipeSearchFlyout.Models"
-             xmlns:anim="clr-namespace:Xamanimation;assembly=Xamanimation"
-             xmlns:sh="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
-             xmlns:sharedTransitions="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions">
+             >
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="New" Clicked="NewRecipe_Clicked" />
     </ContentPage.ToolbarItems>
 
     <StackLayout Margin="20" >
-        <Label Text="Your recipes" FontSize="30" FontAttributes="Bold" TextColor="Black"/>
-        <sh:Shadows CornerRadius="30" Shades="{sh:SingleShade Offset='0,2', BlurRadius=10, Opacity=0.20, Color='Black'}">
-            <CarouselView ItemsSource="{Binding Recipes}" Loop="False" Margin="0,0,0,15">
-                <CarouselView.ItemsLayout>
+        <Label Text="Your recipes" FontSize="Medium" FontAttributes="Bold" TextColor="Black"/>
+        <!--sh:Shadows CornerRadius="30" Shades="{sh:SingleShade Offset='0,2', BlurRadius=10, Opacity=0.20, Color='Black'}"-->
+            <ListView ItemsSource="{Binding Recipes}" Margin="0,0,0,15">
+                <!--ListView.ItemsLayout>
                     <LinearItemsLayout ItemSpacing="30" Orientation="Horizontal" />
-                </CarouselView.ItemsLayout>
-                <CarouselView.ItemTemplate>
+                </ListView.ItemsLayout-->
+                <ListView.ItemTemplate>
                     <DataTemplate>
                         <Frame x:DataType="model:Item" CornerRadius="40" HasShadow="False">
-                            <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="-50">
-                                <Image x:Name="recipeImageUrl" Source="{Binding ImageUrl}" Aspect="AspectFill" HeightRequest="700" WidthRequest="400" Margin="0,-100,0,-400"/>
-                                <Label VerticalTextAlignment="Center" Text="{Binding RecipeName}" BackgroundColor="White" FontSize="30" FontAttributes="Bold" Padding="50,10" TextColor="Black"/>
+                            <StackLayout VerticalOptions="Center" 
+                                         HorizontalOptions="Center" Padding="-50">
+                                <Image x:Name="recipeImageUrl" 
+                                       Source="{Binding ImageUrl}" 
+                                       Aspect="AspectFill" 
+                                       HeightRequest="700" 
+                                       WidthRequest="400" 
+                                       Margin="0,-100,0,-400"/>
+                                <Label VerticalTextAlignment="Center" 
+                                       Text="{Binding RecipeName}" BackgroundColor="White" 
+                                       FontSize="Default" 
+                                       FontAttributes="Bold" 
+                                       TextColor="Black"/>
                             </StackLayout>
-                            <Frame.GestureRecognizers>
-                                <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding Source={RelativeSource AncestorType={x:Type local:MyRecipesViewModel}}, Path=RecipeTapped}" CommandParameter="{Binding .}"/>
-                            </Frame.GestureRecognizers>
+                            <!--Frame.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                    NumberOfTapsRequired="1" 
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type local:MyRecipesViewModel}}, Path=RecipeTapped}" 
+                                    CommandParameter="{Binding .}"/>
+                            </Frame.GestureRecognizers-->
                         </Frame>
                     </DataTemplate>
-                </CarouselView.ItemTemplate>
-            </CarouselView>
-        </sh:Shadows>
+                </ListView.ItemTemplate>
+            </ListView>
+        <!--/sh:Shadows-->
         <StackLayout.Behaviors>
-            <anim:EntranceTransition Duration="200"/>
+            <!--anim:EntranceTransition Duration="200"/-->
         </StackLayout.Behaviors>
     </StackLayout>
 </ContentPage>

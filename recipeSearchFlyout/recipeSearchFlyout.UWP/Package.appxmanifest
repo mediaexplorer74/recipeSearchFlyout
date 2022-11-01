@@ -9,7 +9,7 @@
   <Identity
     Name="ME.recipeSearchFlyoutV1"
     Publisher="CN=media"
-    Version="1.0.0.0" />
+    Version="1.0.5.0" />
 
   <mp:PhoneIdentity PhoneProductId="ec485741-fd3e-483c-81be-68815c480690" PhonePublisherId="48500000-0003-4830-0000-000000000000"/>
 

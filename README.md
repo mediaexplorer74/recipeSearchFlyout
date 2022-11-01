@@ -1,12 +1,21 @@
-# recipeSearchFlyout
+# recipeSearchFlyout 
 
-This is a fork&reimplementation of [recipeSearchFlyout app](https://github.com/rachelkang/recipeSearchFlyout/) solution adding/tuning UWP project.
+This is a fork&reimplementation of [recipeSearchFlyout app](https://github.com/rachelkang/recipeSearchFlyout/) solution turning UWP target ON and adding SDK 15063 compatibility.
 
 ## Screenshots
 
 ![Windows 10 Desktop](Images/shot1.png)
 ![Android](Images/shot2.png)
+![Windows 10 Mobile](Images/shot3.png)
 
+## Status
+- Downshifted from .NET S. 2 to 1.4
+- Draft
+- Work in progress
+
+## About the original
+
+"
 Recipes (Rachel's Recipes) is a cross-platform mobile application that uses Xamarin.Forms. 
 It was inspired by all those who are new to cooking (dare I say, first-time chefs! :)), 
 especially during these unprecedented times of quarantining, social distancing, and increased cooking. 
@@ -14,6 +23,7 @@ It is intended to provide a single place to both search for new recipes as well
 as keep track of personal ones.
 
 _This app continues to be work-in-progress and at the moment, its primary purpose is for my personal exploration of Xamarin.Forms, to learn more about the framework as a first-time user and contributer._
+"
 
 ## App features
 
@@ -28,17 +38,12 @@ _This app continues to be work-in-progress and at the moment, its primary purpos
 |`NETStandard.Library`|
 |`Newtonsoft.Json` |
 |`Xamarin.Forms`|
-|`Xamarin.Forms.Visual.Material`|
 |`Xamarin.Essentials`|
-|`Xamarin.CommunityToolkit`|
-|`Xamarin.Plugin.SharedTransitions`|
-|`Xamanimation`|
 |`Resizetizer.NT`|
-|`Sharpnado.Shadows`|
+
 
 ## Credits
-_Disclaimer: Although the app is called "Rachel's Recipes", none of the recipes are her own._
-* Original [recipeSearchFlyout app](https://github.com/rachelkang/recipeSearchFlyout/)
+* Original .NET Standard 2-based [recipeSearchFlyout app](https://github.com/rachelkang/recipeSearchFlyout/)
 * Shell-based [recipeSearch app](https://github.com/rachelkang/recipeSearch/)
 * Recipes from [Edamam](https://developer.edamam.com/) 
 * Icons from [Flaticon](https://www.flaticon.com/)

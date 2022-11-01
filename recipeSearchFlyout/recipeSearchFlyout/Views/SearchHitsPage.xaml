@@ -5,14 +5,10 @@
              xmlns:vm="clr-namespace:recipeSearchFlyout.ViewModels"
              x:Class="recipeSearchFlyout.Views.SearchHitsPage"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-             xmlns:sharedTransitions="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"
-             Title="{Binding Title}"
-             xmlns:sh="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
-             xmlns:anim="clr-namespace:Xamanimation;assembly=Xamanimation">
+             Title="{Binding Title}">
 
-     <StackLayout Margin="5,5,5,0">
+   <StackLayout Margin="5,5,5,0">
         <SearchBar x:Name="searchBar"
-                   ios:SearchBar.SearchBarStyle="Default"
                    BackgroundColor="White"
                    Placeholder="Search recipes..."
                    CancelButtonColor="{StaticResource Primary}"
@@ -20,32 +16,60 @@
                    PlaceholderColor="Gray"
                    TextColor="Black"
                    SearchCommand="{Binding SearchCommand}"/>
-        <Label Text="{Binding NoResultsLabel}" IsVisible="{Binding NoResultsLabelVisible}" Padding="20,0,20,0" HorizontalTextAlignment="Center" FontAttributes="Italic" TextColor="{StaticResource Primary}"/>
-        <CollectionView x:Name="HitsListView" ItemsSource="{Binding RecipeData.Hits}" SelectionMode="None" Margin="10" IsVisible="{Binding SearchResultsVisible}" AutomationProperties.IsInAccessibleTree="true" AutomationProperties.Name="Search results list" AutomationProperties.HelpText="Select one of the search results to see recipe details">
-            <CollectionView.ItemsLayout>
-                <GridItemsLayout Orientation="Vertical" Span="2" />
-            </CollectionView.ItemsLayout>
-            <CollectionView.ItemTemplate AutomationProperties.IsInAccessibleTree="true" AutomationProperties.LabeledBy="{x:Reference recipeName}">
+            
+        <Label Text="{Binding NoResultsLabel}" 
+               IsVisible="{Binding NoResultsLabelVisible}" 
+               HorizontalTextAlignment="Center" 
+               FontAttributes="Italic" 
+               TextColor="{StaticResource Primary}"/>
+        
+            <ListView x:Name="HitsListView" ItemsSource="{Binding RecipeData.Hits}" 
+                  Margin="10" 
+                  IsVisible="{Binding SearchResultsVisible}" 
+                  AutomationProperties.IsInAccessibleTree="true" 
+                  AutomationProperties.Name="Search results list" 
+                  AutomationProperties.HelpText="Select one of the search results to see recipe details">
+          
+            <ListView.ItemTemplate AutomationProperties.IsInAccessibleTree="true" AutomationProperties.LabeledBy="{x:Reference recipeName}">
                 <DataTemplate>
-                    <sh:Shadows CornerRadius="5" Shades="{sh:SingleShade Offset='0,5', BlurRadius=10, Opacity=0.2, Color='Black'}">
-                        <Frame CornerRadius="5" HasShadow="False" Margin="10">
-                            <StackLayout HeightRequest="200" VerticalOptions="Fill" HorizontalOptions="Fill" Padding="-20">
-                                <Image Source="{Binding Recipe.ImageUrl}" VerticalOptions="FillAndExpand" Aspect="AspectFill" Margin="0,0,0,-200" />
-                                <Label x:Name="recipeName" Padding="5" Text="{Binding Recipe.RecipeName}" LineBreakMode="WordWrap" Style="{DynamicResource ListItemTextStyle}" FontSize="16" VerticalTextAlignment="Center" TextColor="Black" FontAttributes="Bold" BackgroundColor="White"/>
+                    <!--sh:Shadows CornerRadius="5" Shades="{sh:SingleShade Offset='0,5', BlurRadius=10, Opacity=0.2, Color='Black'}"-->
+                        <Frame HasShadow="False" Margin="10">
+                            <StackLayout HeightRequest="200" 
+                                         VerticalOptions="Fill" 
+                                         HorizontalOptions="Fill" 
+                                         Padding="-20">
+                                <Image Source="{Binding Recipe.ImageUrl}" 
+                                       VerticalOptions="FillAndExpand" 
+                                       Aspect="AspectFill" Margin="0,0,0,-200" />
+
+                            <!-- Text="{Binding Recipe.RecipeName}"  -->
+                                <Label x:Name="recipeName"  
+                                       Text="recipeName"
+                                       LineBreakMode="WordWrap" 
+                                       Style="{DynamicResource ListItemTextStyle}"
+                                       FontSize="Medium" 
+                                       VerticalTextAlignment="Center" 
+                                       TextColor="Black" 
+                                       FontAttributes="Bold"
+                                       BackgroundColor="White"/>
                             </StackLayout>
-                            <Frame.GestureRecognizers>
-                                <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding Source={RelativeSource AncestorType={x:Type vm:SearchHitsViewModel}}, Path=ItemTapped}" CommandParameter="{Binding .}"/>
-                            </Frame.GestureRecognizers>
+                            <!--Frame.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                    NumberOfTapsRequired="1" 
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type vm:SearchHitsViewModel}}, Path=ItemTapped}" 
+                                    CommandParameter="{Binding .}"/>
+                            </Frame.GestureRecognizers-->
                         </Frame>
-                    </sh:Shadows>
+                    <!--/sh:Shadows-->
                 </DataTemplate>
-            </CollectionView.ItemTemplate>
-            <CollectionView.Behaviors>
-                <anim:EntranceTransition Duration="200"/>
-            </CollectionView.Behaviors>
-        </CollectionView>
+            </ListView.ItemTemplate>
+            <ListView.Behaviors>
+                <!--anim:EntranceTransition Duration="200"/-->
+            </ListView.Behaviors>
+        </ListView>
+       
         <StackLayout.Behaviors>
-            <anim:EntranceTransition Duration="500"/>
+            <!--anim:EntranceTransition Duration="500"/-->
         </StackLayout.Behaviors>
     </StackLayout>
 </ContentPage>

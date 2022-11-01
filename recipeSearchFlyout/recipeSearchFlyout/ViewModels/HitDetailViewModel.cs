@@ -112,12 +112,14 @@ namespace recipeSearchFlyout.ViewModels
             var recipeBodyFormattedString = new FormattedString();
             recipeBodyFormattedString.Spans.Add(new Span { Text = "Click " });
 
-            var recipeUrlFormattedString = new Span { Text = "here", TextColor = Color.Blue, TextDecorations = TextDecorations.Underline };
+            var recipeUrlFormattedString = new Span { Text = "here", BackgroundColor = Color.Blue };
+            /*
             recipeUrlFormattedString.GestureRecognizers.Add(new TapGestureRecognizer()
             {
                 Command = TapCommand,
                 CommandParameter = Hit.Recipe.RecipeUrl
             });
+            */
             recipeBodyFormattedString.Spans.Add(recipeUrlFormattedString);
 
             recipeBodyFormattedString.Spans.Add(new Span { Text = " to view full recipe." });

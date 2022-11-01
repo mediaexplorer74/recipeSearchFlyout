@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Xamarin.Forms;
-using Xamarin.CommunityToolkit.Extensions;
-using Xamarin.CommunityToolkit.UI.Views.Options;
+//using Xamarin.CommunityToolkit.Extensions;
+//using Xamarin.CommunityToolkit.UI.Views.Options;
 using recipeSearchFlyout.ViewModels;
 using Color = Xamarin.Forms.Color;
 using System;
@@ -25,6 +25,7 @@ namespace recipeSearchFlyout.Views
 
 		async void AddItem_Clicked(object sender, EventArgs e)
 		{
+			/*
 			var messageOptions = new MessageOptions
 			{
 				Foreground = primary,
@@ -52,6 +53,7 @@ namespace recipeSearchFlyout.Views
 			};
 
 			await this.DisplaySnackBarAsync(options);
+			*/
 		}
 	}
 }
